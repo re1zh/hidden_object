@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main{
+			width: 1870px;
+			height: 960px;
+			left: 0
+			top: 0;
+			background-image: url(dom.jpg);
+			position: absolute;
+		}
+		.block{
+			width: 250px;
+			height: 400px;
+			background: orange;
+			position: absolute;
+		}
+		.ball{
+			width: 50px;
+			height: 50px;
+			left: 20px;
+			top: 860px;
+			position: absolute;
+		}
+		.bird{
+			width: 50px;
+			height: 50px;
+			left: 340px;
+			top: 160px;
+			position: absolute;
+		}
+		.cat{
+			width: 60px;
+			height: 70px;
+			left: 1700px;
+			top: 810px;
+			position: absolute;
+		}
+		.flower{
+			width: 50px;
+			height: 50px;
+			left: 500px;
+			top: 670px;
+			position: absolute;
+		}
+		.h1{
+			font-family: Montserrat;
+			padding-left: 10px;
+		}
+		.h2{
+			font-family: Montserrat;
+			padding-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div style="left: 0; top: 0">
+		<div class="main">
+			<div class="block">
+				<h1 class="h1">Найди:</h1>
+				<h2 class="h2 ball-text">Мяч</h2>
+				<h2 class="h2 bird-text">Птичка</h2>
+				<h2 class="h2 cat-text">Кот</h2>
+				<h2 class="h2 flower-text">Цветочек</h2>
+				<h1 class="h1">Очки:</h1>
+				<h2 class="h2 score"></h2>
+			</div>
+			<img src="ball.svg" class="ball">
+			<img src="bird.svg" class="bird"> 
+			<img src="cat.svg" class="cat">
+			<img src="flower.svg" class="flower">
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		let score = 0;
+		document.querySelector(".score").innerHTML = score
+		document.querySelector('.ball').onclick = function(){
+			alert("опа, нашел")
+			document.querySelector(".ball-text").style.textDecoration = 'line-through'
+			score = score + 250;	
+			document.querySelector(".ball").style.display = 'none'
+			document.querySelector(".score").innerHTML = score
+		}
+		document.querySelector('.cat').onclick = function(){
+			alert("опа, нашел")
+			document.querySelector(".cat-text").style.textDecoration = 'line-through'
+			score = score + 250;	
+			document.querySelector(".cat").style.display = 'none'
+			document.querySelector(".score").innerHTML = score
+		}
+		document.querySelector('.bird').onclick = function(){
+			alert("опа, нашел")
+			document.querySelector(".bird-text").style.textDecoration = 'line-through'
+			score = score + 250;	
+			document.querySelector(".bird").style.display = 'none'
+			document.querySelector(".score").innerHTML = score
+		}
+		document.querySelector('.flower').onclick = function(){
+			alert("опа, нашел")
+			document.querySelector(".flower-text").style.textDecoration = 'line-through'
+			score = score + 250;	
+			document.querySelector(".flower").style.display = 'none'
+			document.querySelector(".score").innerHTML = score
+		}
+	</script>
+</body>
+</html>
